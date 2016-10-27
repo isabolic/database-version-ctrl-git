@@ -1,0 +1,7 @@
+{
+    "user"          :  "tool",
+    "password"      :  "xxx",
+    "connectString" : "playground:1521/XE",
+    "useJSONFormat" :  false,
+    "enableLogging" :  true
+}

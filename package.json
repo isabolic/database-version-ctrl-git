@@ -1,0 +1,24 @@
+{
+  "name": "oracle-ddl-save",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "isabolic99 (sabolic.ivan@gmail.com)",
+  "license": "MIT",
+  "config": "config.json",
+  "dependencies": {
+    "deferred": "^0.7.5",
+    "express": "^4.14.0",
+    "fs": "0.0.1-security",
+    "mkdir": "0.0.2",
+    "mkdirp": "^0.5.1",
+    "oracledb": "^1.11.0",
+    "promise-oracledb": "^2.0.5",
+    "q": "^1.4.1",
+    "simple-git": "^1.54.0",
+    "winston": "^2.2.0"
+  }
+}
