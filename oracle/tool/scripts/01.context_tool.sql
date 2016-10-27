@@ -1,0 +1,3 @@
+CREATE OR REPLACE CONTEXT TOOL USING p$utl_context;
+/
+

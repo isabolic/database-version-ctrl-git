@@ -1,0 +1,2 @@
+ALTER TABLE ddl_log ADD CONSTRAINT ddl_log_pk PRIMARY KEY (id);
+/

@@ -1,0 +1,4 @@
+CREATE USER tool
+  IDENTIFIED BY tool
+  DEFAULT TABLESPACE tool;
+/
