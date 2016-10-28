@@ -254,7 +254,7 @@
 
             mkdirp(fsPath, function (err) {
                 if (err) {
-                    errorHandler(err);
+                    errorHandler.call(this, err);
                 }else{
                     this.log.info(this.name, 'created directory : ' + fsPath);
                 }
@@ -270,7 +270,7 @@
                     fsPathwithFile, { flags: 'w', defaultEncoding: 'utf8', fd: null, mode: 0o666, autoClose: true }
                 );
 
-                outStream.on('error', errorHandler);
+                outStream.on('error', errorHandler.bind(this));
                 content.pipe(outStream);
 
                 outStream.on("finish", function(){
@@ -304,7 +304,7 @@
          //.then(cmdCloseDBConn.bind(this))
          .catch(function (error) {
                     this.log.error(this.name, "executeAdapter..." + error);
-                    //close db.. 
+                    //close db..
                     cmdCloseDBConn.call(this);
                     this.def.reject(error);
                 }.bind(this))
