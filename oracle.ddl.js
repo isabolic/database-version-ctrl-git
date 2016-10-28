@@ -300,8 +300,6 @@
          .then(areExpJobsDone.bind(this))
          .then(cmdGetDDLs.bind(this))
          .then(writeToFs.bind(this))
-         //.then(cmdUpdateStatus.bind(this))
-         //.then(cmdCloseDBConn.bind(this))
          .catch(function (error) {
                     this.log.error(this.name, "executeAdapter..." + error);
                     //close db..

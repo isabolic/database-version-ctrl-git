@@ -14,7 +14,7 @@
     const getCLLocation  = "begin                                       " +
                            "  :ret := p$ver_ctrl.f_get_cl_file_location;" +
                            "end;                                        ";
-    
+
     /**
      * [createFIleIfNotExist - PRIVATE helper function create file if doesn't exist ]
      * @param  {String} file [file path]
@@ -102,7 +102,12 @@
             });
 
             db.getConnection()
-                .then(function (conn){
+                .done(function (err, conn){
+                    if (err){
+                        log.error(util.name, err);
+                        def.reject(err);
+                    }
+
                     conn.execute(
                         cmd,
                         bindvars,
@@ -152,7 +157,7 @@
                 files.forEach(function(row, idx){
                     r = "";
                     // new line chars...
-                    
+
                     if (idx === 0){
                         // separete commits with new line
                         r += ("\n\n");
